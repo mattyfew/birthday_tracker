@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div>
+    <ul>
+        {% for item in birthdays %}
+            <li>{{ item.name }}...{{ item.birthday }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

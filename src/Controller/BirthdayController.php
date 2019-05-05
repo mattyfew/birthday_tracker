@@ -13,12 +13,24 @@ class BirthdayController extends AbstractController
      */
     public function index()
     {
-        // return $this->json([
-        //     'message' => 'Welcome to your new controller!',
-        //     'path' => 'src/Controller/BirthdayController.php',
-        // ]);
+        $birthdays = [
+            [
+                'name' => 'Matt Fewer',
+                'birthday' => 'January 12, 1989'
+            ],
+            [
+                'name' => 'Loretta Levin',
+                'birthday' => 'April 14, 1989'
+            ],
+            [
+                'name' => 'Carolyn Fewer',
+                'birthday' => 'December 24, 1960'
+            ]
+        ];
 
-        return new Response('merpppp');
+        return $this->render('birthdays/show.html.twig', [
+            'birthdays' => $birthdays
+        ]);
     }
 
 
@@ -27,5 +39,6 @@ class BirthdayController extends AbstractController
      */
     public function add()
     {
+
     }
 }
