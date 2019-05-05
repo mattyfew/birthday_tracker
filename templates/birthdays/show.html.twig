@@ -1,10 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<a href="{{ path('app_homepage') }}">Go to main page</a>
+<a href="{{ path('add_birthday') }}">Add new birthday</a>
 <div>
     <ul>
         {% for item in birthdays %}
-            <li>{{ item.name }}...{{ item.birthday }}</li>
+            <li>
+                <a class="js-fav-heart" href="{{ path('toggle_fav', { slug: item.id }) }}">( fav )</a>
+                {{ item.name }}...{{ item.birthday }}
+            </li>
         {% endfor %}
     </ul>
 </div>

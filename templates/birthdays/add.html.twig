@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<a href="{{ path('app_homepage') }}">Go to main page</a>
+<form>
+    <h1>Add a new Birthday</h1>
+
+    <input type="text" name="name" value="" />
+    <input type="text" name="birthday" value="" />
+
+    <button type="submit" name="button">Add</button>
+</form>
+{% endblock %}
